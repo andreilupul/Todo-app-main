@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- <script src="./script.js" defer ></script> -->
+  <script src="test.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="page_container">
+
+    <div class="page_image_container">
+      <img id="page_image" class="page_image" src="./images/bg-desktop-dark.jpg" alt="img">
+    </div>
+    
+    
+    <section  class="page_todo_container">
+
+    <div class="title_container">
+        <h1 class="h1" >Todo</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38"><path fill="#FFF" fill-rule="evenodd" d="M13 0c.81 0 1.603.074 2.373.216C10.593 1.199 7 5.43 7 10.5 7 16.299 11.701 21 17.5 21c2.996 0 5.7-1.255 7.613-3.268C23.22 22.572 18.51 26 13 26 5.82 26 0 20.18 0 13S5.82 0 13 0z"/></svg>
+    </div>
+
+      <div><input type="text" class="input_todo" id="input_todo" ></div>
+
+      <div id="container_todo">
+         <!-- <div class="todo_list_container" id="todo_list_container" >
+            <button class="btn_todo_check" id="btn_todo_check" ></button>
+            <span class="text_todo_input" id="text_todo_input" ></span>
+            <button class="btn_todo_delete" id="btn_todo_delete" >x</button> 
+         </div> -->
+      </div>
+   
+
+
+      <footer class="footer" >
+       <div><span style="color: white;" class="item_left" id="item_left" >5 items left</span></div>
+     <div class="button_select_container">
+          <button class="btn_all" id="btn_all" >All</button>
+          <button class="btn_active" id="btn_active" >Active</button>
+          <button class="btn_completed" id="btn_completed" >Completed</button>
+     </div>
+        <button class="btn_clearCompleted" id="btn_clearCompleted" >Clear Completed</button>
+      </footer>
+
+    </section>
+
+  </main>
+  <!-- Todo -->
+
+  <!-- Add dynamic number items left -->
+
+  <!-- All -->
+  <!-- Active  -->
+  <!-- Completed -->
+
+  <!-- Clear Completed -->
+
+  <!-- Drag and drop to reorder list -->
+
+  
+</body>
+</html>

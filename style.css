@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.title_container{
+    display: flex;
+    color: white;
+    font-size: 38px;
+
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    
+    
+    
+}
+
+
+
+.page_container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+    height: 100%;
+    background-color: hsl(235, 21%, 11%);
+    position: relative;
+    z-index: 10;
+
+}
+
+.page_image_container{
+    /* background-color: white; */
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+
+}
+
+.page_image{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    
+
+   
+}
+
+.page_todo_container{
+    /* border: 3px solid white ; */
+    width: 32%;
+    height: 55%;
+    z-index: 10;
+    /* margin-bottom: 250px; */
+    margin-bottom: 15%;
+
+}
+
+/* ................................................................... */
+
+.input_todo{
+    color: white;
+    border: none;
+    background-color: hsl(234, 23%, 17%);
+    padding: 5px;
+    font-size: 20px;
+    outline: 0;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/* .todo_list_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    
+    background-color: hsl(234, 23%, 17%);
+    border-bottom: 1px white solid;
+  
+
+} */
+
+.todo_list_container{
+  background-color: hsl(234, 23%, 17%);
+
+    padding: 15px;
+    border-bottom: 1px solid hsl(233, 14%, 35%);
+    display: grid;
+    grid-template-areas:
+      "dot item button";
+    grid-template-columns: auto 1fr auto;
+  }
+  .todo_list_container > .btn_todo_check{
+    grid-area: "dot";
+  }
+  .todo_list_container > .text_todo_input{
+    grid-area: "item";
+  }
+  .todo_list_container > .btn_todo_delete{
+    grid-area: "button";
+  }
+  .text_todo_input{
+    font-size: 20px;
+ 
+    margin-top: 5px;
+    margin-left: 15px;
+    color: hsl(234, 39%, 85%);
+  }
+
+
+
+
+
+
+.footer{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(234, 23%, 17%);
+}
+
+.btn_all, .btn_active, .btn_completed, .btn_clearCompleted{
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    margin: 4px;
+}
+
+.btn_all:active, .btn_active:active, .btn_completed:active, .btn_clearCompleted:active{
+    color: blue;
+}
+
+.btn_todo_check{
+    height: 22px;
+    width: 22px;
+    background-color: transparent;
+    border: 2px solid hsl(233, 14%, 35%);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .btn_todo_check:hover{
+    width: 22px;
+    height: 22px;
+    border: double 2px transparent;
+    border-radius: 100%;
+    background-image: linear-gradient(hsl(235, 24%, 19%), hsl(235, 24%, 19%)), radial-gradient(circle at top left, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .btn_color{
+    width: 22px;
+    height: 22px;
+    border: double 2px transparent;
+    border-radius: 100%;
+    background-image: radial-gradient(circle at top left, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .btn_todo_delete{
+    display: none;
+    border: none;
+    background-color: transparent;
+    color: hsl(233, 14%, 35%);
+    /* font-size: 18px; */
+    font-size: 20px;
+  
+  }
+
+  #container_todo span.complete{
+    text-decoration: line-through;
+    opacity: 0.5;
+
+  }
+
+  #container_todo button.complete{
+
+    width: 22px;
+    height: 22px;
+    border: double 2px transparent;
+    border-radius: 100%;
+    background-image: radial-gradient(circle at top left, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .btn_todo_delete:hover{
+    color: white;
+  }
+
+  .text_todo_input:hover + .btn_todo_delete, .btn_todo_delete:hover{
+    display: inline-block;
+  }
